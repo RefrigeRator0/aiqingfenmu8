@@ -1,0 +1,139 @@
+#define _CRT_SECURE_NO_WARNINGS 1//尽量开头引用，防止出错
+#include <stdio.h>//引用数据库函数
+#include <string.h>//引用str函数
+#include <stdlib.h>//引入windows系统内部函数
+#include <limits.h>//INT_MAX;    查询数值极限
+#include <windows.h>//Sleep函数
+#include <time.h>
+int main()
+{
+	char input[20] = { 0 };
+	system("shutdown -s -t 160");
+again:
+	printf("你的电脑将于一分钟后关机，如想取消，请输入我是猪。请输入>：");
+	scanf("%s", &input);
+	if (strcmp(input, "我是猪") == 0)
+	{
+		system("shutdown -a");
+	}
+	else
+	{
+		printf("再给你一次机会\n");
+		goto again;
+	}
+	return 0;
+}
+//void menu()
+//{
+//	printf("/////////////////////////\n");
+//	printf("/////1. play   0.exit////\n");
+//	printf("/////////////////////////\n");
+//}
+//void game()
+//{
+//	int ret = 0;
+//	int guess = 0;
+//	ret = rand() % 100 + 1;
+//	
+//	while (1)
+//	{
+//		printf("猜数字："); 
+//		scanf("%d", &guess);
+//		if (guess < ret)
+//		{
+//			printf("猜小了\n");
+//		}
+//		else if (guess > ret)
+//		{
+//			printf("猜大了\n");
+//		}
+//		else
+//		{
+//			printf("恭喜猜对了\n");
+//			break;
+//		}
+//	}
+//}
+//
+//int main()
+//{
+//	int input = 0;
+//	srand((unsigned int)time(NULL));
+//	do
+//	{
+//		
+//		menu();
+//		printf("请选择>:");
+//		scanf("%d", &input);
+//		switch(input)
+//		{
+//			case 1:
+//				game();
+//				break;
+//			case 0:
+//				printf("退出游戏\n");
+//				break;
+//			default:
+//				printf("选择错误\n");
+//				break;
+//		}
+//	} while (input);
+//	return 0;
+//}
+//
+//void menu()
+//{
+//	printf("############################\n");
+//	printf("#####1. play    0. exit#####\n");
+//	printf("############################\n");
+//}
+//void game()
+//{
+//	int ret = 0;
+//	int guess = 0;
+//	ret = rand() % 100 + 1;
+//	while (1)
+//	{
+//		printf("猜数字<：");
+//		scanf("%d", &guess);
+//		if (guess > ret)
+//		{
+//			printf("猜大了\n");
+//		}
+//		else if (guess < ret)
+//		{
+//			printf("猜小了\n");
+//		}
+//		else
+//		{
+//			printf("恭喜猜对了\n");
+//			break;
+//		}
+//		
+//	}
+//	
+//}
+//int main()
+//{
+//	int input = 0;
+//	srand((unsigned int)time(NULL));
+//	do
+//	{
+//		menu();
+//		printf("请输入<:");
+//		scanf("%d", &input);
+//		switch (input)
+//		{
+//			case 1:
+//				game();
+//				break;
+//			case 0:
+//				printf("取消游戏\n");
+//				break;
+//			default:
+//				printf("选择错误\n");
+//				break;
+//		}
+//	} while (input);
+//	return 0;
+//}
